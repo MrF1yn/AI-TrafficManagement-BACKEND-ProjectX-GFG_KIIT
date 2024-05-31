@@ -38,7 +38,7 @@ def evaluate(vid):
         number = vehicle_count.count_vehicles('temp.jpg')
         lane[i + 1] = number
 
-    signals.manage_traffic_lights(lane)
+    return signals.manage_traffic_lights(lane)
 
 
 if __name__ == "__main__":

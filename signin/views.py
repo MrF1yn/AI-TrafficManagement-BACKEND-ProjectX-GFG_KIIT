@@ -6,12 +6,15 @@ from django.contrib.auth import authenticate, login, logout
 from django.core.files.storage import FileSystemStorage
 from . import eval
 
+
 # Create your views here.
 def home(request):
     return HttpResponse("Hello home")
 
+
 def errorpage(request):
     return HttpResponse("Bad Credentials")
+
 
 # Addtion of email authentication and activation
 
@@ -31,9 +34,8 @@ def signin(request):
             # ask what to do here
             return redirect('errorpage')
 
-
-
     return render(request, 'signin/login.html')
+
 
 def signup(request):
     if request.method == "POST":
@@ -51,19 +53,27 @@ def signup(request):
 
     return render(request, 'signin/register.html')
 
+
 def signout(request):
     logout(request)
     messages.success(request, "Successfully logged out")
     return redirect('/')
 
+
 def user_func(request):
-    return render(request, "user/user.html")
+    if request.method == 'POST' and request.FILES['video_file']:
+        return upload_video(request)
+    else:
+        return render(request, "user/user.html")
     # return HttpResponse("user html")
 
+
 def results_func(request):
-    return HttpResponse("result html")
+    return render(request, "results/results.html", {"traffic_lights": [0, 0, 0, 0]})
+
 
 def upload_video(request):
+    traffic_lights = []
     if request.method == 'POST' and request.FILES['video_file']:
         video_files = request.FILES.getlist('video_file')
         if len(video_files) < 4:
@@ -76,10 +86,10 @@ def upload_video(request):
             uploaded_file_urls.append(fs.path(filename))
             print("Uploaded successfully")
 
-        eval.evaluate(uploaded_file_urls)
+        traffic_lights = eval.evaluate(uploaded_file_urls)
     # return redirect('/signin/results')
-        # Do something with the uploaded file, e.g., save it to a model
-        # return render(request, 'your_template.html', {
-        #     'uploaded_file_url': uploaded_file_url
-        # })
-    return HttpResponse("Not uploaded")
+    # Do something with the uploaded file, e.g., save it to a model
+    # return render(request, 'your_template.html', {
+    #     'uploaded_file_url': uploaded_file_url
+    # })
+    return render(request, "results/results.html", {"traffic_lights": traffic_lights})

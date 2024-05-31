@@ -308,7 +308,7 @@
     </nav>
     <main>
         <div class="video-box">
-            <form enctype="multipart/form-data" action="/signin/upload" method="post">
+            <form enctype="multipart/form-data" action="/signin/user" method="post">
                 {% csrf_token %}
                 <h3>Add video from...</h3>
                 <input type="file" accept="video/*" name="video_file" multiple>

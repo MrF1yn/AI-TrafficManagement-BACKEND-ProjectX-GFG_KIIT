@@ -12,5 +12,5 @@ urlpatterns = [
     path('signout', views.signout, name="signout"),
     path('user', views.user_func, name="user"),
     path('results', views.results_func, name="results"),
-    path('upload', views.upload_video, name='upload_video'),
+    # path('upload', views.upload_video, name='upload_video'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

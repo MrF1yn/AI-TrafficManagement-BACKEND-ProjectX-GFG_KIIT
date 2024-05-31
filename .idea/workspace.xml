@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36b6b5ac-438c-4869-8f0c-76edb1b1ed22" name="Changes" comment="" />
+    <list default="true" id="36b6b5ac-438c-4869-8f0c-76edb1b1ed22" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/results/results.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/results/sty_res.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signin/eval.py" beforeDir="false" afterPath="$PROJECT_DIR$/signin/eval.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signin/signals.py" beforeDir="false" afterPath="$PROJECT_DIR$/signin/signals.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signin/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/signin/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signin/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/signin/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/user.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,9 +23,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2hEwPKdTIzeir3H8fYfSfNbiGRK" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -26,9 +36,15 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/PyCharmProjects/AI-TrafficManagement-ProjectX-GFG_KIIT"
+    "last_opened_file_path": "C:/PyCharmProjects/AI-TrafficManagement-ProjectX-GFG_KIIT/templates/result",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\PyCharmProjects\AI-TrafficManagement-ProjectX-GFG_KIIT\templates\result" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
