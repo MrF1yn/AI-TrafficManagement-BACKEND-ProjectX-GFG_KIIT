@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="/CSS/sty_ind.css"> -->
+    <style>
+        *{
+  padding: 0;
+  margin: 0;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #000; 
+  color: #fff; 
+  min-height: 100vh;
+}
+
+main{
+  flex-grow: 1;
+}
+
+/* WebKit browsers (Chrome, Safari)
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #ff0000;
+  border-radius: 6px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #ddd;
+} 
+*/
+
+body::-webkit-scrollbar {
+  width: 0px;
+} 
+
+/* header {
+  background-color: #fff;
+  color: #fff;
+  text-align: center;
+  padding: 0.5px;
+} */
+
+nav {
+  /* position: relative; */
+  margin-bottom: 5px;
+  width: 100%;
+  text-align: right;
+  background-color: #fff; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* nav{
+  background-color: white;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+} */
+
+nav  img {
+  height: 69px;
+  margin-right: 40px;
+}
+
+/* nav:first-child{
+  margin-right: auto;
+  height: 69px;
+  margin-right: 40px;
+} */
+
+/* nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+} */
+
+nav ul{
+  /* width: 100%; */
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* nav li{
+  height: 100%; 
+} */
+
+nav a {
+  height: 100%;
+  text-decoration: none;
+  color: #000; 
+  font-weight: bold;
+  padding: 0px 40px;
+  /* padding: 30px 40px; */
+  align-items: center;
+  /* margin-right: 20px;
+  margin: 5px;  */
+}
+
+nav a:hover {
+  /* color: #333;  */
+  text-decoration: underline; 
+  /* background-color: #bfbfbf; */
+}
+
+
+
+
+
+.retractnav{
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: rgba(255 , 255, 255 , 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content:flex-start;
+}
+
+.retractnav li{
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 0px;
+  padding-right: 200px;
+  display: flex;
+  align-items: flex-start;
+  /* padding: 0; */
+}
+
+.retractnav a{
+  width: 100%;
+    display: flex;
+  align-items: flex-start;
+}
+
+.retractnav a:hover {
+  /* color: #333;  */
+  text-decoration: none;
+  /* background-color: #bfbfbf; */
+}
+
+.retractnav li:hover {
+  /* color: #333;  */
+  /* text-decoration: underline;  */
+  background-color: #bfbfbf;
+}
+
+main {
+  padding: 1em;
+}
+
+footer {
+  /* justify-content: flex-end; */
+  align-items:end;
+  margin-top: 30px;
+  background-color: #fff;
+  color: #333;
+  padding: 1px;
+}
+
+
+
+h1 {
+  margin: 30px 10px ; 
+  text-align: center;
+  font-family: 'Roboto';
+  letter-spacing: 5px;
+  word-spacing: 10px;
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 99.71px;
+}
+
+h3 {
+  margin-top: 10px; 
+  font-weight: 400;
+  font-size: 20px; 
+  letter-spacing: 5px;  
+  font-family: 'Roboto';
+  text-align: center;
+  word-spacing: 10px;
+}
+
+.retractnav .reg-btn {
+  background-color: transparent; 
+  color: #000;
+  padding: 5px 8px;
+  padding-left: 40px;
+  margin-right: 30px;
+  /* border: 3px solid #EE0E0E; */
+  /* cursor: pointer; */
+  /* transition: border-color 0.5s; */
+  /* border-radius: 10px; */
+}
+
+.register-btn {
+  background-color: transparent; 
+  color: #272323;
+  padding: 5px 8px;
+  margin-right: 30px;
+  border: 3px solid #EE0E0E;
+  cursor: pointer;
+  transition: border-color 0.5s;
+  border-radius: 10px;
+}
+
+.register-btn:hover {
+  border-color: #66ff66; 
+  text-decoration: none; 
+}
+
+.Features {
+  margin-top: 40px; 
+  margin-bottom: 30px;
+  font-size: 20px; 
+  font-family: Arial, sans-serif;
+  text-align: center;
+  color: #EE0E0E;
+  letter-spacing: 2px;
+}
+
+
+.feature-box {
+  margin-bottom: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
+
+.box {
+  background-color: #272323;
+  padding: 40px;
+  /* margin-left: 200px;
+  margin-right: 100px;
+  margin-bottom: 20px; */
+  text-align:justify;
+  border-radius: 10px;
+}
+
+/* .box_rev {
+  background-color: #272323;
+  padding: 10px;
+  margin-right: 200px;
+  margin-left: 100px;
+  margin-bottom: 20px;
+  text-align: center;
+  border-radius: 10px;
+} */
+
+section .feature-box div img {
+  width: 30px;
+  height: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 20px; 
+  margin-left: 20px;
+}
+
+section .box_h {
+  list-style-type: none;
+  display: flex;
+  justify-content:flex-start;
+  
+}
+
+section .box_h h3{
+  font-family: 'Roboto';
+  font:bolder;
+  word-spacing: 5px;
+  letter-spacing: 2px;
+}
+
+.menu{
+  display: none;
+}
+
+@media(max-width : 950px){
+   .hidemobile{
+     display: none;
+   }
+   .menu{
+    display: block;
+  }
+}
+
+/* @media(min-width : 950px){
+  .menu{
+    display: none;
+  }
+} */
+
+@media(max-width : 414px){
+  .retractnav{
+    width: 100%;
+  }
+
+  /* h3 {
+    margin-top: 10px; 
+    font-weight: 400;
+    font-size: 20px; 
+    letter-spacing: 5px;  
+    font-family: 'Roboto';
+    text-align: center;
+    word-spacing: 10px;
+  } */
+  
+}
+
+@media(max-width : 611px){
+  h1 {
+    font-size:30px;
+    font-weight: 900;
+  }
+  
+}
+    </style>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <title>hula hu</title>
+</head>
+
+<body>
+    <!-- <header> -->
+    <nav>
+        <img src="/Images/2.png" alt="hehe">
+
+        <ul class='retractnav'>
+            <li onclick=clossRetractnav()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24"
+                        viewBox="0 -960 960 960" width="24">
+                        <path
+                            d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                    </svg></a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">How it Works</a></li>
+            <li><a href="/signin">Login</a></li>
+            <li><a href="/signin/register" class="reg-btn">Register</a></li>
+        </ul>
+
+        <ul>
+            <li class="hidemobile"><a href="/">Home</a></li>
+            <li class="hidemobile"><a href="#">Features</a></li>
+            <li class="hidemobile"><a href="#">How it Works</a></li>
+            <li class="hidemobile"><a href="/signin">Login</a></li>
+            <li class="hidemobile"><a href="/signin/register" class="register-btn">Register</a></li>
+            <li class="menu" onclick=showRetractnav()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24"
+                        viewBox="0 -960 960 960" width="24">
+                        <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+                    </svg></a></li>
+        </ul>
+    </nav>
+    <!-- </header> -->
+
+    <main>
+
+        <h1>Revolutionize Your Traffic Management</h1>
+        <h3>Intelligent Solutions for Efficient Traffic control</h3>
+
+        <section>
+            <div class="Features">
+                <h5>FEATURES</h5>
+            </div>
+            <div class="feature-box">
+                <div class="box">
+                    <div class="box_h">
+                        <img src="/Images/1.png" alt="Image 1">
+                        <h3>Real-time Traffic Monitoring</h3>
+                    </div>
+                    <p>Monitor traffic conditions instantly to make informed decisions
+                    </p>
+                </div>
+                <div class="box">
+                    <div class="box_h">
+                        <img src="/Images/1.png" alt="Image 1">
+                        <h3>Intelligent Traffic Routing</h3>
+                    </div>
+                    <p>Optimize traffic flow by dynamically
+                        adjusting routes based on real-time data
+                    </p>
+                </div>
+            </div>
+            <div class="feature-box">
+                <div class="box">
+                    <div class="box_h">
+                        <img src="/Images/1.png" alt="Image 1">
+                        <h3>Automated Traffic Alerts</h3>
+                    </div>
+                    <p>Receive automated alerts about accidents,
+                        road closures, and other incidents
+                    </p>
+                </div>
+                <div class="box">
+                    <div class="box_h">
+                        <img src="/Images/1.png" alt="Image 1">
+                        <h3>Data Analytics and Reporting</h3>
+                    </div>
+                    <p>Access detailed analytics and reports to improve traffic management strategies
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- <script src="/JS/script.js"></script> -->
+    <script>
+        function toggleMenu() {
+            var menuBar = document.getElementById('menuBar');
+            menuBar.classList.toggle('active');
+        }
+
+        function navigateToPage() {
+            window.location.href = '/HTML/results.html';
+        }
+
+        function showRetractnav() {
+            const retractbar = document.querySelector('.retractnav')
+            retractbar.style.display = 'flex'
+        }
+
+        function clossRetractnav() {
+            const closemenu = document.querySelector('.retractnav')
+            closemenu.style.display = 'none'
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var form = document.querySelector('form');
+            if (form) {
+                form.addEventListener('submit', function (event) {
+                    event.preventDefault();
+                    window.location.href = 'user.html';
+                });
+            }
+        });
+
+    </script>
+
+    <footer>
+        <p>&copy;</p>
+    </footer>
+</body>
+
+</html>

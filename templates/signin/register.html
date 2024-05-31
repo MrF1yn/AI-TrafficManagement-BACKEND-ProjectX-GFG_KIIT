@@ -1,0 +1,285 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <!-- <link rel="stylesheet" href="/CSS/sty_reg.css"> -->
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background: url("/Images/3.jpeg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            height: 100vh;
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        body::-webkit-scrollbar {
+            width: 0px;
+        }
+
+        /* 
+header {
+  background-color: #fff;
+  color: #fff;
+  text-align: center;
+  padding: 0.5px;
+  margin-bottom: 55px;
+} */
+
+        main {
+            flex-grow: 1;
+        }
+
+
+        .blank {
+            padding: 20px;
+        }
+
+
+        footer {
+            /* justify-content: flex-end;
+  margin-top: 100px; */
+            background-color: #fff;
+            color: #333;
+            padding: 0.5px;
+        }
+
+        /* nav {
+  margin-bottom: 5px;
+  width: 100%;
+  text-align: right;
+  background-color: #fff; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+nav  img {
+  height: 69px;
+  margin-right: 40px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000; 
+  font-weight: bold;
+  padding: 0px 40px;
+  margin-right: 20px;
+  margin: 5px; 
+}
+
+
+nav a:hover {
+  color: #333; 
+  text-decoration: underline; 
+} */
+
+        .login-container {
+            margin-top: 50px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+            text-align: center;
+            max-width: 400px;
+            /* max-height: 700px; */
+            margin: auto;
+            margin-bottom: 60px;
+        }
+
+        .login-container h2 {
+            color: #000000;
+            margin-bottom: 20px;
+        }
+
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .login-form label {
+            color: #000000;
+            text-align: left;
+            margin-bottom: 5px;
+            width: 80%;
+        }
+
+        .login-form input {
+            padding: 10px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.5);
+            color: #333;
+            font-weight: bold;
+            outline: none;
+            width: 80%;
+        }
+
+        .reg_butt {
+            text-decoration: none;
+            margin-top: 100px;
+            margin-bottom: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-radius: 5px;
+            color: #000000;
+            cursor: pointer;
+            margin-top: 25px;
+            font-family: 'Roboto';
+            font-weight: bolder;
+            padding-left: 120px;
+            padding-right: 120px;
+            font-size: large;
+            background-color: #EE0E0E;
+            transition: background-color color 0.3s;
+
+        }
+
+        .login-form .reg_butt:hover {
+            background-color: #33cc00;
+            color: aliceblue;
+        }
+
+        .social-logins {
+            display: flex;
+            justify-content: space-evenly;
+            padding-top: 05px;
+            padding-bottom: 10px;
+            width: 80%;
+            /* border: 2px solid #333; */
+        }
+
+        .social-logins img {
+            height: 40px;
+            width: 40px;
+        }
+
+        #ggl {
+            height: 35px;
+            width: 35px;
+        }
+
+        .register-btn {
+            background-color: transparent;
+            color: #272323;
+            padding: 5px 10px;
+            margin-right: 30px;
+            border: 3px solid #EE0E0E;
+            cursor: pointer;
+            transition: border-color 0.5s;
+            border-radius: 10px;
+        }
+
+        .register-btn:hover {
+            border-color: #66ff66;
+            text-decoration: none;
+        }
+
+        @media(max-width : 550px) {
+
+            .login-container {
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+
+
+        }
+
+        @media(max-width : 470px) {
+
+            .reg_butt {
+                padding-left: 60px;
+                padding-right: 60px;
+            }
+
+
+        }
+    </style>
+    <title>Login Page</title>
+</head>
+
+<body>
+
+    <!-- <header>
+        <nav>
+            <img src="/Images/2.png" alt="hehe">
+            <ul>
+                    <li><a href="/HTML/index.html">Home</a></li>
+                    <li><a href="#">Features</a></li>
+                    <li><a href="#">How it Works</a></li>
+                    <li><a href="/HTML/login.html">Login</a></li>
+                <li><a href="/HTML/register.html" class="register-btn">Register</a></li>
+            </ul>
+        </nav>
+    </header> -->
+
+    <div class="blank"></div>
+
+    <main>
+        <div class="login-container">
+            <h2>WELCOME</h2>
+            <form class="login-form" action="/signin/register" method="post">
+                {% csrf_token %}
+                <label for='name'>Name</label>
+                <input type="text" name="name" placeholder="Enter your name" required>
+                <label for='email'>Email</label>
+                <input type="text" name="email" placeholder="Email" required>
+                <label for='password'>Password</label>
+                <input type="password" name="password" placeholder="Password" required>
+                <!-- <a href="/HTML/user.html">
+              <input type="submit" value="Register">
+            </a> -->
+                <!-- <div class=" reg_butt"> -->
+                <!-- <a href="/HTML/user.html"> -->
+                <!-- <button>Register</button> -->
+                <!-- </a> -->
+                <!-- </div> -->
+
+                <!-- <a href="" class="reg_butt">Register</a> -->
+                <button class="reg_butt">Register</button>
+
+                <h5>Or <br> continue with</h5>
+                <div class="social-logins">
+                    <a href="#" class="social-login"><img src="/Images/facebook.png" alt="Facebook Logo"></a>
+                    <a href="#" class="social-login"><img id="ggl" src="/Images/google.png" alt="Google Logo"></a>
+                </div>
+                <a href="#" class="forgot-password">Forgot Password?</a>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy;</p>
+    </footer>
+</body>
+
+</html>
