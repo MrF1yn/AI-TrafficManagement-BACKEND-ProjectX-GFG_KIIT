@@ -71,6 +71,9 @@ def user_func(request):
 def results_func(request):
     return render(request, "results/results.html", {"traffic_lights": [0, 0, 0, 0]})
 
+def map_func(request):
+    return render(request, "map/map.html")
+
 
 def upload_video(request):
     traffic_lights = []
@@ -93,3 +96,4 @@ def upload_video(request):
     #     'uploaded_file_url': uploaded_file_url
     # })
     return render(request, "results/results.html", {"traffic_lights": traffic_lights})
+
