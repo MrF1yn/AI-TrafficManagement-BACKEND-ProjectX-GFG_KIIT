@@ -5,15 +5,66 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="36b6b5ac-438c-4869-8f0c-76edb1b1ed22" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/map/map.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/AI-TrafficManagement-ProjectX-GFG_KIIT.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AI-TrafficManagement-ProjectX-GFG_KIIT.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/signin/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/signin/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/signin/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/signin/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/AI-TrafficManagement-ProjectX-GFG_KIIT.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signin/Vehicle_Count/.ipynb_checkpoints/Vehicle-Count-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/signin/Vehicle_Count/Vehicle-Count.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/signin/Vehicle_Count/coco.names" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/signin/Vehicle_Count/demo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/signin/Vehicle_Count/yolov3.cfg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/signin/Vehicle_Count/yolov3.weights" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/signin/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/signin/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/signin/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/signin/data/demo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/signin/data/demo10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/signin/data/demo2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/signin/data/demo3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/signin/data/demo4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/signin/data/demo5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/signin/data/demo6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/signin/data/demo7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/signin/data/demo8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/signin/data/demo9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/signin/data/vid.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/signin/data/vid1.avi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/signin/data/vid2.avi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/signin/data/vid3.avi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/signin/data/vid4.avi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/signin/eval.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/signin/frame.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/signin/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/signin/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/signin/signals.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/signin/tempCodeRunnerFile.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/signin/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/signin/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/signin/vehicle_count.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/signin/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/signin/script.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/signin/sty_log.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temp.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/core/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/core/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/map/map.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/map/map.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/results/results.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/results/results.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/signin/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/signin/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/signin/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/signin/register.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/user/user.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/user.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/traffic_management_system/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/traffic_management_system/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/traffic_management_system/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/traffic_management_system/asgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/traffic_management_system/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/traffic_management_system/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/traffic_management_system/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/traffic_management_system/wsgi.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +96,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/PyCharmProjects/AI-TrafficManagement-ProjectX-GFG_KIIT&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/PyCharmProjects/Smart-Traffic-Management&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -64,7 +115,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-WS-241.15989.105" />
+        <option value="bundled-python-sdk-babbdf50b680-746f403e7f0c-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-241.15989.155" />
       </set>
     </attachedChunks>
   </component>
