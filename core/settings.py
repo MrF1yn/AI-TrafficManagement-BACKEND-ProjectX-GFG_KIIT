@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    "daphne",
     'django.contrib.sites',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -51,8 +52,16 @@ INSTALLED_APPS = [
     "dj_rest_auth",
     "dj_rest_auth.registration",
     "corsheaders",
-    "restapi"
+    "channels",
+    "realtime_model",
+    "restapi",
+
+
 ]
+WSGI_APPLICATION = 'core.wsgi.application'
+ASGI_APPLICATION = 'core.asgi.application'
+
+
 
 SOCIALACCOUNT_PROVIDERS = {
     "google": {
