@@ -42,6 +42,16 @@ def clear_uploads(request):
     return HttpResponse("SUCCESS")
 
 
+@api_view(['DELETE'])
+def delete_video(request):
+    if request.data and request.data['name']:
+        fs = FileSystemStorage()
+        video_dir = 'uploaded_videos/' + request.user.username + '/' + request.data['name']
+        if fs.exists(video_dir):
+            fs.delete(video_dir)
+    return HttpResponse("SUCCESS")
+
+
 @api_view(['GET'])
 def get_uploads(request):
     fs = FileSystemStorage()

@@ -22,4 +22,5 @@ urlpatterns = [
     path('upload/', views.upload_video, name="upload"),
     path('clear/', views.clear_uploads, name="clear"),
     path('get_uploads/', views.get_uploads, name="get_uploads"),
+    path('delete_video/', views.delete_video, name="delete_video"),
 ]
