@@ -1,8 +1,11 @@
+import base64
+
 import cv2
 import numpy as np
 import time
 from collections import defaultdict
 import json
+
 
 # Load YOLO
 def load_yolo():
@@ -121,7 +124,8 @@ def predict(video_paths, socket):
     window_names = ['Lane 1', 'Lane 2', 'Lane 3', 'Lane 4']
     caps = [cv2.VideoCapture(video) for video in video_paths]
     fps = [cap.get(cv2.CAP_PROP_FPS) for cap in caps]
-    car_counts = defaultdict(int)
+    car_counts = {}
+    car_counts_number = defaultdict(int)
     start_time = time.time()
 
     while True:
@@ -147,7 +151,11 @@ def predict(video_paths, socket):
                     cv2.putText(frame, label, (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, color, 2)
 
             # Update car count for the lane
-            car_counts[window_names[i]] = car_count
+            # ret, buffer = cv2.imencode('.jpg', frame)
+            car_counts_number[window_names[i]] = car_count
+            car_counts[window_names[i]] = {}
+            car_counts[window_names[i]]['count'] = car_count
+            car_counts[window_names[i]]['frame'] = frame
 
             # Display car count
             # cv2.putText(frame, f'Cars: {car_count}', (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
@@ -160,17 +168,28 @@ def predict(video_paths, socket):
         if time.time() - start_time > 5:
             start_time = time.time()
             # Determine the lane with the most cars
-            max_lane = max(car_counts, key=car_counts.get)
+            max_lane = max(car_counts_number, key=car_counts_number.get)
+            data = []
 
             print(f"Lane with most cars: {max_lane}")
             print(car_counts)
-            socket.send(text_data=json.dumps(car_counts))
+
             # Simulate traffic signal change (for visualization purpose, we can print or update a display)
-            for lane in window_names:
+            for idx, lane in enumerate(window_names):
+                data.append({})
+                data[idx]['car_count'] = car_counts[lane]['count']
+                data[idx]['fps'] = fps[idx]
+                data[idx]['time'] = start_time
+                ret, buffer = cv2.imencode('.jpg', car_counts[lane]['frame'])
+                data[idx]['frame'] = str(base64.b64encode(buffer), "utf-8")
                 if lane == max_lane:
                     print(f"Green Light for {lane}")
+                    data[idx]['stop'] = False
                 else:
                     print(f"Red Light for {lane}")
+                    data[idx]['stop'] = True
+
+            socket.send(text_data=json.dumps(data))
 
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break

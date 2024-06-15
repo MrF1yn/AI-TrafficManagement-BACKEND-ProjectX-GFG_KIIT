@@ -1,4 +1,3 @@
-from urllib.parse import parse_qs
 
 from channels.db import database_sync_to_async
 from django.contrib.auth import get_user_model
@@ -22,8 +21,15 @@ class WebSocketJWTAuthMiddleware:
         self.app = app
 
     async def __call__(self, scope, receive, send):
-        parsed_query_string = parse_qs(scope["query_string"])
-        token = parsed_query_string.get(b"token")[0].decode("utf-8")
+        authorization_token = None
+
+        # Iterate through headers to find 'authorization' key
+        for key, value in scope["headers"]:
+            if key == b'authorization':
+                authorization_token = value.decode('utf-8').split(' ')[1]  # Extract token part after 'Bearer '
+                break
+
+        token = authorization_token
 
         try:
             access_token = AccessToken(token)

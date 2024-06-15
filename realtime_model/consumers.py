@@ -48,7 +48,10 @@ class Consumer(WebsocketConsumer):
         # self.close()
 
     def disconnect(self, close_code):
-        pass
+        if self.scope["user"].username in threads.keys():
+            thread = threads[self.scope["user"].username]
+            thread.raise_exception()
+            thread.join()
 
     def receive(self, text_data):
         if text_data == "start":
@@ -62,7 +65,7 @@ class Consumer(WebsocketConsumer):
             t1.start()
             return
         if text_data == "stop":
-            if threads[self.scope["user"].username]:
+            if self.scope["user"].username in threads.keys():
                 thread = threads[self.scope["user"].username]
                 thread.raise_exception()
                 thread.join()

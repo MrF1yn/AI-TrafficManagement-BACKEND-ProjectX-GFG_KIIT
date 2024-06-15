@@ -3,5 +3,5 @@ from django.urls import path
 from realtime_model import consumers
 
 ws_urlpatterns = [
-    path("ws/test/", consumers.Consumer.as_asgi())
+    path("ws/ml_model/", consumers.Consumer.as_asgi())
 ]
