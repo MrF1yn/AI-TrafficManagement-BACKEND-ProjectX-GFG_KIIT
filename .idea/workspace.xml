@@ -10,7 +10,10 @@
       <change beforePath="$PROJECT_DIR$/realtime_model/consumers.py" beforeDir="false" afterPath="$PROJECT_DIR$/realtime_model/consumers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/realtime_model/middlewares.py" beforeDir="false" afterPath="$PROJECT_DIR$/realtime_model/middlewares.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/realtime_model/ml_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/realtime_model/ml_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/realtime_model/routing.py" beforeDir="false" afterPath="$PROJECT_DIR$/realtime_model/routing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploaded_videos/test/vid1.avi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploaded_videos/test/vid2.avi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploaded_videos/test/vid3.avi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploaded_videos/test/vid4.avi" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

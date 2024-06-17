@@ -165,13 +165,13 @@ def predict(video_paths, socket):
             time.sleep(1 / fps[i])
 
         # Check if 10 seconds have passed
-        if time.time() - start_time > 5:
+        if time.time() - start_time > 2:
             start_time = time.time()
             # Determine the lane with the most cars
             max_lane = max(car_counts_number, key=car_counts_number.get)
             data = []
 
-            print(f"Lane with most cars: {max_lane}")
+            print(f"Lane with most cars: {max_lane} ")
             print(car_counts)
 
             # Simulate traffic signal change (for visualization purpose, we can print or update a display)

@@ -22,13 +22,13 @@ class WebSocketJWTAuthMiddleware:
 
     async def __call__(self, scope, receive, send):
         authorization_token = None
-
-        # Iterate through headers to find 'authorization' key
-        for key, value in scope["headers"]:
-            if key == b'authorization':
-                authorization_token = value.decode('utf-8').split(' ')[1]  # Extract token part after 'Bearer '
+        # Iterate through headers to find 'sec-websocket-protocol' key which has the jwt token
+        index = None
+        for idx, pair in enumerate(scope["headers"]):
+            key, value = pair
+            if key == b'sec-websocket-protocol':
+                authorization_token = value.decode('utf-8').split(", ")[1]
                 break
-
         token = authorization_token
 
         try:

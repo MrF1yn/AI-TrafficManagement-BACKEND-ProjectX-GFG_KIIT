@@ -8,6 +8,7 @@ import threading
 from . import ml_model
 
 threads = {}
+sockets = {}
 
 
 class multithreaded_model(threading.Thread):
@@ -43,23 +44,50 @@ class multithreaded_model(threading.Thread):
 
 class Consumer(WebsocketConsumer):
     def connect(self):
-        self.accept()
-        print(self.scope["user"].username)
-        # self.close()
-
-    def disconnect(self, close_code):
+        fs = FileSystemStorage()
+        user_dir = "uploaded_videos/" + self.scope["user"].username + "/"
+        if not fs.exists(user_dir):
+            return
+        [folders, files] = fs.listdir(user_dir)
+        if len(files) < 4:
+            return
+        self.accept("chat")
         if self.scope["user"].username in threads.keys():
             thread = threads[self.scope["user"].username]
             thread.raise_exception()
             thread.join()
+            threads.pop(self.scope["user"].username)
+        if self.scope["user"].username in sockets.keys():
+            sockets[self.scope["user"].username].close()
+        sockets[self.scope["user"].username] = self
+        print(sockets)
+        # self.close()
+
+    def disconnect(self, close_code):
+        if self.scope["user"].username in sockets.keys():
+            sockets.pop(self.scope["user"].username)
+        if self.scope["user"].username in threads.keys():
+            thread = threads[self.scope["user"].username]
+            thread.raise_exception()
+            thread.join()
+            threads.pop(self.scope["user"].username)
 
     def receive(self, text_data):
         if text_data == "start":
+            if self.scope["user"].username in threads.keys():
+                thread = threads[self.scope["user"].username]
+                thread.raise_exception()
+                thread.join()
+                threads.pop(self.scope["user"].username)
             fs = FileSystemStorage()
-            [folders, files] = fs.listdir("uploaded_videos/" + self.scope["user"].username + "/")
+            user_dir = "uploaded_videos/" + self.scope["user"].username + "/"
+            if not fs.exists(user_dir):
+                return
+            [folders, files] = fs.listdir(user_dir)
+            if len(files) < 4:
+                return
             # video_dir = ["uploaded_videos/"+self.scope["user"].username+"/"+files]
             video_dir = ["uploaded_videos/" + self.scope["user"].username + "/" + file for file in files]
-            self.send(text_data=json.dumps(video_dir))
             t1 = multithreaded_model(video_dir, self)
             threads[self.scope["user"].username] = t1
             t1.start()
@@ -69,3 +97,4 @@ class Consumer(WebsocketConsumer):
                 thread = threads[self.scope["user"].username]
                 thread.raise_exception()
                 thread.join()
+                threads.pop(self.scope["user"].username)
