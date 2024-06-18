@@ -7,13 +7,6 @@
     <list default="true" id="195bf870-d90a-46d6-be84-f7175059481e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/realtime_model/consumers.py" beforeDir="false" afterPath="$PROJECT_DIR$/realtime_model/consumers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/realtime_model/middlewares.py" beforeDir="false" afterPath="$PROJECT_DIR$/realtime_model/middlewares.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/realtime_model/ml_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/realtime_model/ml_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploaded_videos/test/vid1.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploaded_videos/test/vid2.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploaded_videos/test/vid3.avi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploaded_videos/test/vid4.avi" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
