@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="195bf870-d90a-46d6-be84-f7175059481e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +37,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "/home/dibyajyotidey/PycharmProjects/AI-TrafficManagement-ProjectX-GFG_KIIT",
+    "last_opened_file_path": "/home/dibyajyotidey/PycharmProjects/AI-TrafficManagement-BACKEND-ProjectX-GFG_KIIT",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -72,6 +72,7 @@
       <option name="presentableId" value="Default" />
       <updated>1718190850865</updated>
       <workItem from="1720717597613" duration="326000" />
+      <workItem from="1720718866314" duration="351000" />
     </task>
     <servers />
   </component>
